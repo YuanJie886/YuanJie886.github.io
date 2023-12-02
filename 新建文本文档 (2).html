@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style type="text/css">
+        fieldset {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function displayName() {
+            alert("帐号：" + myForm.username.value);
+        }
+
+        function displayPassword() {
+            alert("密码：" + myForm.password.value);
+        }
+
+        function displayAll() {
+            var allinfo = "帐号：" + myForm.username.value;
+            allinfo += "\n密码：" + myForm.password.value;
+            allinfo +="\n用户类型："+myForm.user.value;
+            alert(allinfo);
+        }
+    </script>
+</head>
+
+<body>
+<form name="myForm" method="post" action="" onsubmit="displayAll();">
+    <fieldset>
+        <legend align="center">用户注册</legend>
+        <br><br> 帐号：
+        <input type="text" name="username" onblur="displayName()"><br> 密码：
+        <input type="password" name="password" ><br> 用户类型:
+        <input type="radio" name="user" checked="checked" value="教师">教师
+        <input type="radio" name="user" value="学生">学生
+        <input type="radio" name="user" value="管理员">管理员
+        <input type="submit" value="提交">
+        <input type="reset">
+    </fieldset>
+</form>
+</body>
+</html>
+
